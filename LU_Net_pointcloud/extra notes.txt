@@ -1,0 +1,7 @@
+semantic kitti api was modified for our purposes
+
+Comments on architecture change:
+- Since we do not have TF records, we do pre-processing everytime we read a pointcloud (RI convertion, neighbour search) and same frame goes several times through this step, depending on the number of epochs.
+
+It can be more efficient if we create our own random batch shuffle and pick, since we need to relate pointclouds with correspoinding labels 
+
