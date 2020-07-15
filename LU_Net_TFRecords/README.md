@@ -6,7 +6,7 @@ Further details can be found in the thesis document in the root path.
 The implementation is done in Python and Tensorflow.
 
 ## Requirements
-The instructions have been tested on Ubuntu 16.04 with Python 3.6 and Tensorflow 1.6 with GPU support.
+The instructions have been tested on Ubuntu 16.04 with Python 3.6 and TensorFlow 1.6 with GPU support.
 
 First, clone the repository:
 ```bash
@@ -47,5 +47,5 @@ Change the parameter --checkpoint to the one of interest.
 You can easily create different configuration settings by editing the configuration file located in **config/lunet.cfg**.
 
 
-##TO Do 
+## TO Do 
 Auxiliary folder is actually a modification of semanticKITTI API. In the future, this should be adapted to use directly the official API

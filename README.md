@@ -6,15 +6,15 @@ We offer two versions of the training workflow:
 
 ### LU_Net_TFRecords
 This version requires the generation of TFRecords for faster and independent training on a range image level. 
-Before training, the user should run a script to generate the tensor flow records that performs all the preprocessing and binarize the training examples. 
+Before training, the user should run a script to generate the TensorFlow records that performs all the preprocessing and binarizes the training examples. 
 
 This version is recommended for faster training. 
 
 ### LU_Net_pointcloud
-This version works directly from the pointcloud, performing all the preprocessing for each instance at each iteration. It is suitable for testing different configurations at any point of the process without the creation of TFRecords 
-This version is able to do proper training but it hasn’t been optimized, taking around 2 seconds per batch at each iteration. 
+This version works directly from the point cloud, performing all the preprocessing for each instance at each iteration. It is suitable for testing different configurations at any point of the process without the creation of TFRecords.
+This version is able to do proper training but it has not been optimized, taking around 2 seconds per batch at each iteration. 
 
-Details about the research process are explained in the thesis master document
+Details about the research process are explained in the thesis master document.
 
 
 ### References

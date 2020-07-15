@@ -3,7 +3,7 @@
 We use LU-Net as backbone, adapting it to SemanticKITTI dataset. We also update different areas of the architecture. 
 Further details can be found in the thesis document in the root path. 
 
-The implementation is done in Python and Tensorflow.
+The implementation is done in Python and TensorFlow.
 
 ## Requirements
 The instructions have been tested on Ubuntu 16.04 with Python 3.6 and Tensorflow 1.6 with GPU support.
@@ -44,5 +44,5 @@ Change the parameter --checkpoint to the one of interest.
 ## Customize the settings
 You can easily create different configuration settings by editing the configuration file located in **config/lunet.cfg**.
 
-##TO Do
+## TO Do
 This version hasn't been optimized and is very slow due to the preprocessing needed for LU-Net. For faster training please refer to LU_Net_TFRecords.
