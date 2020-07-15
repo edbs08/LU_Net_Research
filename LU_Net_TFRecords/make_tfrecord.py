@@ -58,7 +58,7 @@ def get_range_image(CFG, bin_file, label_names=None):
     learning_map = CFG["learning_map"]
 
     nclasses = len(color_dict)
-    scan = SemLaserScan(nclasses, map_dict=learning_map, sem_color_dict=color_dict, project=True, W=2048)
+    scan = SemLaserScan(nclasses, map_dict=learning_map, sem_color_dict=color_dict, project=True, W=CONFIG.IMAGE_WIDTH)
     scan.open_scan(bin_file)
     if label_names is not None:
         scan.open_label(label_names)
@@ -188,6 +188,9 @@ def make_tfrecord():
                 scan_names = [os.path.join(dp, f) for dp, dn, fn in os.walk(
                     os.path.expanduser(scan_paths)) for f in fn]
                 scan_names.sort()
+                if len(scan_names) == 0:
+                    print("No odometry files found in path {}".format(scan_paths))
+                    quit()
                 # List the label files
                 label_paths = os.path.join(dataset, "sequences", seq_string, "labels")
                 label_names = [os.path.join(dp, f) for dp, dn, fn in os.walk(
